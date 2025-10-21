@@ -1,0 +1,232 @@
+/* Variabel awal */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: var(--hitam);
+    background: #fafafa;
+}
+
+:root {
+    --biru: #3b82f6;
+    --hitam: #0f172a;
+    --abu: #64748b;
+    --putih: #ffffff;
+    --tepi: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Utilitas umum */
+.head {
+    width: min(1100px, 92%);
+    margin-inline: auto;
+}
+
+.judul-besar {
+    font-size: clamp(2rem, 3.5vw + 1rem, 3.5rem);
+    line-height: 1.1;
+    margin: 0.2em 0 0.4em;
+}
+
+.judul-sedang {
+    font-size: 1.5rem;
+    margin: 0.2em 0 0.5em;
+}
+
+.judul-kecil {
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.paragraf {
+    color: var(--abu);
+    line-height: 1.7;
+}
+
+/* Header */
+.header-situs {
+    position: sticky;
+    top: 0;
+    background: var(--putih);
+    border-bottom: 1px solid var(--tepi);
+    z-index: 10;
+}
+
+.header-situs .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.nama {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--hitam);
+}
+
+.tombol-toggle {
+    display: none;
+    border: 1px solid var(--tepi);
+    background: var(--putih);
+    border-radius: 10px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.menu-utama {
+    display: flex;
+    gap: 24px;
+}
+
+.menu-utama .tautan {
+    text-decoration: none;
+    color: var(--hitam);
+    padding: 6px 8px;
+    border-radius: 8px;
+}
+
+.menu-utama .tautan.aktif,
+.menu-utama {
+    color: var(--biru);
+}
+
+/* Hero */
+.bagian-utama {
+    padding: 48px 0;
+}
+
+.kisi-2 {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.ikon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--tepi);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--putih);
+    background: var(--biru);
+}
+
+.gambar-utama {
+    position: relative;
+}
+
+.foto-profil {
+    position: relative;
+    z-index: 1;
+    width: clamp(260px, 32vw, 420px);
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .12);
+}
+
+.sorot {
+    color: var(--biru);
+}
+
+/* Halaman Pengalaman */
+.blok-riwayat {
+    margin: 32px 0;
+}
+
+.box-riwayat {
+    border: 1px solid var(--tepi);
+    background: var(--putih);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 16px 0;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .04);
+}
+
+.header-box {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.waktu {
+    color: var(--abu);
+    font-size: .95rem;
+}
+
+.daftar-poin {
+    margin: .3rem 0 0 1.2rem;
+    color: var(--abu);
+}
+
+/* Halaman Projek */
+.kisi-projek {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.box-projek {
+    border: 1px solid var(--tepi);
+    background: var(--putih);
+    border-radius: 16px;
+}
+
+.gambar-projek {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #eaf2ff;
+}
+
+.isi-box {
+    padding: 14px;
+}
+
+/* Footer (Contact kecil) */
+.footer-situs {
+    margin-top: 48px;
+    border-top: 1px solid var(--tepi);
+    background: #f8fafc;
+}
+
+.kontak-mini {
+    display: grid;
+    gap: 12px;
+    padding: 18px 0;
+}
+
+.form-kontak {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.isian {
+    flex: 1 1 220px;
+    padding: 10px 12px;
+    border: 1px solid var(--tepi);
+    border-radius: 10px;
+}
+
+.tombol-kirim {
+    padding: 10px 16px;
+    border: 0;
+    background: var(--biru);
+    color: var(--putih);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.catatan-kontak {
+    color: var(--abu);
+    font-size: .9rem;
+}
